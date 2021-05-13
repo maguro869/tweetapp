@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tweetapp</title>
+    <title>Twitter2</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,10 +11,11 @@
 
     <header>
       <div class="header-logo">
-        <a href="/">Twitter2</a>
+        <%= link_to("Twitter2", "/")%>
       </div>
       <ul class="header-menus">
-        <a href="/about"><li>Twitter2とは</li></a>
+        <li><%= link_to("Twitter2とは", "/about")%></li>
+        <li><%= link_to("投稿一覧", "/posts/index")%></li>
       </ul>
     </header>
   </head>
