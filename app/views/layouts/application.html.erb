@@ -20,6 +20,11 @@
       </ul>
     </header>
   </head>
+  <% if flash[:notice]%>
+    <div class="flash">
+      <%= flash[:notice]%>
+    </div>
+  <% end %>
 
   <body>
     <%= yield %>
