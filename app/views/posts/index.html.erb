@@ -1,0 +1,19 @@
+<header>
+  <div class="header-logo">
+    <a href="/">Twitter2</a>
+  </div>
+  <ul class="header-menus">
+    <a href="/about"><li>Twitter2とは</li></a>
+  </ul>
+</header>
+
+
+<div class="main posts-index">
+    <div class="container">
+    <% @posts.each do |post| %>
+        <div class="posts-index-item">
+            <%=post%>
+        </div>
+    <% end %>
+    </div>
+</div>
