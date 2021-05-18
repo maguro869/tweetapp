@@ -9,6 +9,7 @@ class LikesController < ApplicationController
         else
             flash[:notice] = "ERROR:いいね！できませんでした。よくないね。"
             redirect_to("/posts/#{params[:post_id]}")
+        end
     end 
 
     def destroy
