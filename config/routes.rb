@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'users/index' => 'user#index'
   get 'users/:id' => 'users#show'
   get 'users/:id/edit' => 'users#edit'
+  get 'users/:id/likes' => 'users#likes'
   get 'login' => 'users#login_form'
   post 'users/create' => 'users#create'
   post 'users/:id/update' => 'users#update'
@@ -20,7 +21,8 @@ Rails.application.routes.draw do
 
   get 'signup' => 'users#new'
   
-
+  post 'likes/:post_id/create' => 'likes#create'
+  post 'likes/:post_id/destroy' => 'likes#destroy'
   get '/' => "home#top"
   get 'about' => "home#about"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
