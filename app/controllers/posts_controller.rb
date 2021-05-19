@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_current_user
   before_action :authenticate_user
-  before_action :ensure_corrent_user, {only: [:edit, :update, :destroy ]}
+  before_action :ensure_correct_user, {only: [:edit, :update, :destroy ]}
 
 
   def index
